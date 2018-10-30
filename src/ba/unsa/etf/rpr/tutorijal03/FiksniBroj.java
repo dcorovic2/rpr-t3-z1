@@ -4,7 +4,8 @@ import java.util.HashMap;
 import java.util.IdentityHashMap;
 
 public class FiksniBroj extends TelefonskiBroj​ {
-    public String mjesto, broj;
+    public String broj;
+    public Grad mjesto;
     public enum Grad {SARAJEVO, TUZLA, ZENICA, BIHAC, ORASJE, GORAZDE, TRAVNIK, MOSTAR, SIROKIBRIJEG, LIVNO, BRCKO}
     public static HashMap<Grad, String> vrijednost = new HashMap<>();
     static {
@@ -22,7 +23,7 @@ public class FiksniBroj extends TelefonskiBroj​ {
     }
 
     FiksniBroj(Grad grad, String broj){
-        mjesto = grad.name();
+        mjesto = grad;
         this.broj = broj;
 
     }
