@@ -85,7 +85,7 @@ public class Imenik {
     }
 
     public Set<TelefonskiBroj​> izGradaBrojevi(FiksniBroj.Grad g){
-        Set<TelefonskiBroj​> skup ;
+        Set<TelefonskiBroj​> skup = new LinkedHashSet<>();
         String pom = pozivni(g);
 
         for(HashMap.Entry<String, TelefonskiBroj​> entry: imeBroj.entrySet()){

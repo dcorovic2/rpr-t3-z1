@@ -14,7 +14,7 @@ public class Program {
 		imenik.dodaj("Pero Peric", new MobilniBroj(64, "987-654"));
 		imenik.dodaj("John Smith", new MedunarodniBroj("+1", "23 45-67-89"));
 		Set<TelefonskiBroj​> set = imenik.izGradaBrojevi(SARAJEVO);
-		System.out.println(set.size());
+
 		for (TelefonskiBroj​ broj: set) {
 			System.out.println(broj.ispisi());
 		}
