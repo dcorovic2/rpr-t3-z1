@@ -13,10 +13,11 @@ public class Program {
 		imenik.dodaj("Meho Mehic", new FiksniBroj(SARAJEVO, "123-656"));
 		imenik.dodaj("Pero Peric", new MobilniBroj(64, "987-654"));
 		imenik.dodaj("John Smith", new MedunarodniBroj("+1", "23 45-67-89"));
-		Set<String> set = imenik.izGrada(SARAJEVO);
-		String result = "";
-		for (String ime: set) {
-			System.out.println(ime + " ");
+		Set<TelefonskiBroj​> set = imenik.izGradaBrojevi(SARAJEVO);
+		System.out.println(set.size());
+		for (TelefonskiBroj​ broj: set) {
+			System.out.println(broj.ispisi());
 		}
+
 	}
 }
