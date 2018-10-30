@@ -1,13 +1,13 @@
 package ba.unsa.etf.rpr.tutorijal03;
 
 import java.util.HashMap;
+import java.util.IdentityHashMap;
 
 public class FiksniBroj extends TelefonskiBroj​ {
     public String mjesto, broj;
-    public HashMap<Grad, String> vrijednost = new HashMap<>();
-    enum Grad {SARAJEVO, TUZLA, ZENICA, BIHAC, ORASJE, GORAZDE, TRAVNIK, MOSTAR, SIROKIBRIJEG, LIVNO, BRCKO}
-
-    FiksniBroj(Grad grad, String broj){
+    public enum Grad {SARAJEVO, TUZLA, ZENICA, BIHAC, ORASJE, GORAZDE, TRAVNIK, MOSTAR, SIROKIBRIJEG, LIVNO, BRCKO}
+    public static HashMap<Grad, String> vrijednost = new HashMap<>();
+    static {
         vrijednost.put(Grad.SARAJEVO, "033");
         vrijednost.put(Grad.TUZLA, "035");
         vrijednost.put(Grad.ZENICA, "032");
@@ -19,6 +19,9 @@ public class FiksniBroj extends TelefonskiBroj​ {
         vrijednost.put(Grad.SIROKIBRIJEG, "039");
         vrijednost.put(Grad.LIVNO, "034");
         vrijednost.put(Grad.BRCKO, "049");
+    }
+
+    FiksniBroj(Grad grad, String broj){
         mjesto = grad.name();
         this.broj = broj;
 

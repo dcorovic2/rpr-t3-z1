@@ -4,27 +4,23 @@ import java.util.HashMap;
 import java.util.Set;
 
 public class Imenik {
-    private HashMap<String, TelefonskiBroj​> imeBroj = new HashMap<>();
+        HashMap<String, TelefonskiBroj​> imeBroj = new HashMap<>();
 
-    public void dodaj(String ime, TelefonskiBroj​ broj​){
-        if(broj​ instanceof FiksniBroj) {
-            FiksniBroj fb = (FiksniBroj) broj​;
-            imeBroj.put(ime, fb);
-        }
-        if(broj​ instanceof MobilniBroj){
-            MobilniBroj mb = (MobilniBroj) broj​;
-            imeBroj.put(ime, broj​);
-        } else {
-            MedunarodniBroj mb = (MedunarodniBroj) broj;
+        void dodaj (String ime, TelefonskiBroj​ broj​){
             imeBroj.put(ime, broj​);
         }
 
-    }
+        String dajBroj (String ime){
+            TelefonskiBroj​ tb = imeBroj.get(ime);
+            //if(tb instanceof FiksniBroj){
+            return tb.ispisi();
+       /* }
+        if(tb instanceof MobilniBroj){
+            return tb.ispisi();
+        }*/
 
-    public String dajBroj(String ime){
-
-    }
-
+        }
+/*
     public naSlovo(char s){
 
     }
@@ -35,5 +31,5 @@ public class Imenik {
 
     public Set<TelefonskiBroj​> izGradaBrojevi(FiksniBroj.Grad g){
 
-    }
+    }*/
 }
