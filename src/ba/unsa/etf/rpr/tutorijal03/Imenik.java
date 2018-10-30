@@ -1,7 +1,9 @@
 package ba.unsa.etf.rpr.tutorijal03;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class Imenik {
         HashMap<String, TelefonskiBroj​> imeBroj = new HashMap<>();
@@ -27,16 +29,58 @@ public class Imenik {
                 s1 += entry.getValue().ispisi();
                 brojac++;
 
-                return s1;
             }
         }
         return s1;
     }
-/*
+
     public Set<String> izGrada(FiksniBroj.Grad g){
+        String pom = new String();
 
+        if(g == FiksniBroj.Grad.SARAJEVO){
+            pom = "033";
+        }
+        if(g == FiksniBroj.Grad.TUZLA){
+            pom = "035";
+        }
+        if(g == FiksniBroj.Grad.ZENICA){
+            pom = "032";
+        }
+        if(g == FiksniBroj.Grad.BIHAC){
+            pom = "037";
+        }
+        if(g == FiksniBroj.Grad.ORASJE){
+            pom = "031";
+        }
+        if(g == FiksniBroj.Grad.GORAZDE){
+            pom = "038";
+        }
+        if(g == FiksniBroj.Grad.TRAVNIK){
+            pom = "030";
+        }
+        if(g == FiksniBroj.Grad.MOSTAR){
+            pom = "036";
+        }
+        if(g == FiksniBroj.Grad.SIROKIBRIJEG){
+            pom = "039";
+        }
+        if(g == FiksniBroj.Grad.LIVNO){
+            pom = "034";
+        }
+        else if(g == FiksniBroj.Grad.BRCKO){
+            pom = "049";
+        }
+
+        Set<String> skup = new TreeSet<>();
+        for(HashMap.Entry<String, TelefonskiBroj​> entry: imeBroj.entrySet()){
+            if(entry.getValue().ispisi().substring(0, 3).equals(pom)) {
+                skup.add(entry.getKey());
+            }
+        }
+
+        return skup;
     }
-
+/*
     public Set<TelefonskiBroj​> izGradaBrojevi(FiksniBroj.Grad g){
 
     }*/

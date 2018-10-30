@@ -28,7 +28,7 @@ class ImenikTest {
         imenik.dodaj("John Smith", new MedunarodniBroj("+1", "23 45-67-89"));
         assertEquals( "1. Ivo Ivic - 061/321-645", imenik.naSlovo('I').trim());
     }
-/*
+
     @Test
     void izGrada() {
         Imenik imenik = new Imenik();
@@ -44,7 +44,7 @@ class ImenikTest {
         }
         assertEquals("Ivo Ivic,Meho Mehic,Sara Sarac,", result);
     }
-
+/*
     @Test
     void izGradaBrojevi() {
         Imenik imenik = new Imenik();
