@@ -1,6 +1,6 @@
 package ba.unsa.etf.rpr.tutorijal03;
 
-abstract class TelefonskiBroj​{
+public abstract class TelefonskiBroj implements Comparable {
     public abstract String ispisi();
     public abstract int hashCode();
 }

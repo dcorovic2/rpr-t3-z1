@@ -3,7 +3,7 @@ package ba.unsa.etf.rpr.tutorijal03;
 import java.util.HashMap;
 import java.util.IdentityHashMap;
 
-public class FiksniBroj extends TelefonskiBroj​ {
+public class FiksniBroj extends TelefonskiBroj{
     public String broj;
     public Grad mjesto;
     public enum Grad {SARAJEVO, TUZLA, ZENICA, BIHAC, ORASJE, GORAZDE, TRAVNIK, MOSTAR, SIROKIBRIJEG, LIVNO, BRCKO}
@@ -22,6 +22,10 @@ public class FiksniBroj extends TelefonskiBroj​ {
         vrijednost.put(Grad.BRCKO, "049");
     }
 
+    public int compareTo(Object o){
+        return this.broj.compareTo(((FiksniBroj) o).broj);
+    }
+
     FiksniBroj(Grad grad, String broj){
         mjesto = grad;
         this.broj = broj;
@@ -36,6 +40,6 @@ public class FiksniBroj extends TelefonskiBroj​ {
     }
 
     public int hashCode(){
-        return TelefonskiBroj​.class.hashCode();
+        return 0;
     }
 }
