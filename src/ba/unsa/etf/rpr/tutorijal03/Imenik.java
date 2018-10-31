@@ -3,14 +3,14 @@ package ba.unsa.etf.rpr.tutorijal03;
 import java.util.*;
 
 public class Imenik {
-        HashMap<String, TelefonskiBroj​> imeBroj = new HashMap<>();
+        HashMap<String, TelefonskiBroj> imeBroj = new HashMap<>();
 
-        void dodaj (String ime, TelefonskiBroj​ broj​){
+        void dodaj (String ime, TelefonskiBroj broj​){
             imeBroj.put(ime, broj​);
         }
 
         String dajBroj (String ime){
-            TelefonskiBroj​ tb = imeBroj.get(ime);
+            TelefonskiBroj tb = imeBroj.get(ime);
             return tb.ispisi();
         }
 
@@ -57,7 +57,7 @@ public class Imenik {
     public String naSlovo(char s){
         int brojac = 1;
         String s1 = new String();
-        for (HashMap.Entry<String, TelefonskiBroj​> entry : imeBroj.entrySet()) {
+        for (HashMap.Entry<String, TelefonskiBroj> entry : imeBroj.entrySet()) {
             if(entry.getKey().charAt(0) == s){
                 s1 += String.valueOf(brojac);
                 s1 += ". ";
@@ -75,7 +75,7 @@ public class Imenik {
         String pom = pozivni(g);
 
         Set<String> skup = new TreeSet<>();
-        for(HashMap.Entry<String, TelefonskiBroj​> entry: imeBroj.entrySet()){
+        for(HashMap.Entry<String, TelefonskiBroj> entry: imeBroj.entrySet()){
             if(entry.getValue().ispisi().substring(0, 3).equals(pom)) {
                 skup.add(entry.getKey());
             }
@@ -84,11 +84,11 @@ public class Imenik {
         return skup;
     }
 
-    public Set<TelefonskiBroj​> izGradaBrojevi(FiksniBroj.Grad g){
-        Set<TelefonskiBroj​> skup = new TreeSet<>();
+    public Set<TelefonskiBroj> izGradaBrojevi(FiksniBroj.Grad g){
+        Set<TelefonskiBroj> skup = new TreeSet<>();
         String pom = pozivni(g);
 
-        for(HashMap.Entry<String, TelefonskiBroj​> entry: imeBroj.entrySet()){
+        for(HashMap.Entry<String, TelefonskiBroj> entry: imeBroj.entrySet()){
             if(entry.getValue().ispisi().substring(0, 3).equals(pom)) {
                 skup.add(entry.getValue());
             }
