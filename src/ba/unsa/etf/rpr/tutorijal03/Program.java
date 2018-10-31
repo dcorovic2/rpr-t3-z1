@@ -30,7 +30,7 @@ public class Program {
 		imenik.dodaj("John Smith", new MedunarodniBroj("+1", "23 45-67-89"));
 		Set<TelefonskiBroj> set = imenik.izGradaBrojevi(SARAJEVO);
 		String result = "";
-		for (TelefonskiBroj​ broj: set) {
+		for (TelefonskiBroj broj: set) {
 			System.out.println(broj.ispisi() + ",");
 		}
 		//assertEquals("033/123-156,033/123-456,033/123-656,", result);
