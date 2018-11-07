@@ -1,14 +1,12 @@
 package ba.unsa.etf.rpr.tutorijal03;
 
-import java.util.HashMap;
-
 public class MobilniBroj extends TelefonskiBroj {
     private int mobilnaMreza;
     private String broj;
 
-    MobilniBroj(int mobilnaMreza, String broj){
-        this.mobilnaMreza = mobilnaMreza;
-        this.broj = broj;
+    MobilniBroj(int mobilnaMreza1, String broj1){
+        this.mobilnaMreza = mobilnaMreza1;
+        this.broj = broj1;
     }
 
     public int compareTo(Object o){

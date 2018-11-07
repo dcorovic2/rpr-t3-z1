@@ -3,9 +3,9 @@ package ba.unsa.etf.rpr.tutorijal03;
 public class MedunarodniBroj extends TelefonskiBroj{
     private String drzava, broj;
 
-    MedunarodniBroj(String drzava, String broj){
-        this.drzava = drzava;
-        this.broj = broj;
+    MedunarodniBroj(String drzava1, String broj1){
+        this.drzava = drzava1;
+        this.broj = broj1;
     }
 
     public int compareTo(Object o){
